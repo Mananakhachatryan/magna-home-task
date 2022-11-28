@@ -6,5 +6,5 @@ export type ModalProps = {
 
 export type DataSourceType = {
   address: string;
-  amount: number;
+  amount: string;
 };

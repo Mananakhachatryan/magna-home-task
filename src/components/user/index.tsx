@@ -61,7 +61,7 @@ const User: FC<UserProps> = () => {
           {new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "ETH",
-          }).format(e)}
+          }).format(+e)}
         </p>
       ),
     },
@@ -71,9 +71,7 @@ const User: FC<UserProps> = () => {
     <LayoutContent>
       <Header>
         <a href="#">{magnaLogo}</a>
-        <Button
-          onClick={() => signOut({ callbackUrl: "/signin", redirect: true })}
-        >
+        <Button onClick={() => signOut({ callbackUrl: "/", redirect: true })}>
           Sign Out
         </Button>
       </Header>
